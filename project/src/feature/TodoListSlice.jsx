@@ -21,7 +21,6 @@ const TodoSlice = createSlice({
             const task = state.find(t => t.id === action.payload);
             task.done = !task.done
         },
-
     }
 })
 
