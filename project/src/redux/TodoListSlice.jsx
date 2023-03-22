@@ -1,12 +1,9 @@
 import { createSlice, createAsyncThunk, configureStore } from "@reduxjs/toolkit"
+import Data from '../data/Todo.json'
 
 const TodoSlice = createSlice({
-
     name: "todo",
-    initialState: [
-
-        { id: 1, text: 'Faire la cuisine', description: 'Faire cuire le poulet à basse température', done: false }
-    ],
+    initialState: Data,
     reducers: {
         addTask: (state, action) => {
             const newTask = {

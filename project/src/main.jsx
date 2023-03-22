@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux';
 import App from './router/App'
 import './index.css'
-import { store } from './feature/TodoListSlice';
+import { store } from './redux/TodoListSlice';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
