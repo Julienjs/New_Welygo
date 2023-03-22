@@ -12,7 +12,7 @@ const Tasks = ({ task }) => {
     };
 
     return (
-        <article className='p-4 cursor-pointer rounded-lg mb-3 border w-1/2 flex items-center mx-auto justify-between'>
+        <article className='p-4 cursor-pointer shadow-md rounded-lg mb-3 w-11/12 flex items-center mx-auto justify-between'>
             <Link to={`/todo/${task.id}`} className=''>
                 <p>{task.title}</p>
             </Link>

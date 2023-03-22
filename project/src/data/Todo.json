@@ -3,12 +3,12 @@
     "id": 1,
     "title": "Cusiner un poulet",
     "description": "Vider le poulet, le laver, ajouter des épices, cuire au four 1h30",
-    "state": "false"
+    "state": false
   },
   {
     "id": 2,
     "title": "Faire le ménage",
     "description": "Faire la poussière, passer l'aspirateur et la serpuillère",
-    "state": "false"
+    "state": false
   }
 ]
