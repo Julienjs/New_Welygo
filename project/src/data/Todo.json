@@ -1,10 +1,12 @@
 [
   {
+    "id": 1,
     "title": "Cusiner un poulet",
-    "state": "true"
+    "state": "false"
   },
   {
+    "id": 2,
     "title": "Faire le ménage",
-    "state": "true"
+    "state": "false"
   }
 ]

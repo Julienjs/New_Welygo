@@ -7,16 +7,15 @@ const TodoSlice = createSlice({
     reducers: {
         addTask: (state, action) => {
             const newTask = {
-                id: "",
-                done: false,
-                text: action.payload,
-                description: action.payload,
+                id: Math.random(),
+                state: false,
+                title: action.payload,
             }
             state.push(newTask)
         },
         toggleTask: (state, action) => {
             const task = state.find(t => t.id === action.payload);
-            task.done = !task.done
+            task.state = !task.state
         },
 
     }
