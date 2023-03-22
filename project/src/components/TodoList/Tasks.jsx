@@ -11,12 +11,14 @@ const Tasks = ({ task }) => {
     };
 
     return (
-        <article className='p-4 rounded-lg mb-3 border w-1/2 flex items-center mx-auto justify-between'>
+
+        <article className='p-4 rounded-lg shadow-md mb-3 w-11/12 flex items-center mx-auto justify-between'>
             <p>{task.title}</p>
             <label htmlFor={task.name}>
                 <input name={task.name} type="checkbox" onChange={(e) => handleChange(e, task.id)} checked={checked} className="checkbox" />
             </label>
         </article>
+
     )
 }
 

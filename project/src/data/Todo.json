@@ -2,11 +2,11 @@
   {
     "id": 1,
     "title": "Cusiner un poulet",
-    "state": "false"
+    "state": false
   },
   {
     "id": 2,
     "title": "Faire le ménage",
-    "state": "false"
+    "state": false
   }
 ]
