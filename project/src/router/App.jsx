@@ -7,8 +7,8 @@ function App() {
   return (
     <div className="w-11/12 mx-auto">
       <Routes>
-        <Route path="/" element={<TodoList />}></Route>
-        <Route path="/todo" element={<DetailTodo />}></Route>
+        <Route path="/" element={<TodoList />} />
+        <Route path="/todo/:id" element={<DetailTodo />} />
       </Routes>
     </div>
   )

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const Tasks = ({ task }) => {
     const [checked, setChecked] = useState(null)
@@ -11,10 +12,12 @@ const Tasks = ({ task }) => {
     };
 
     return (
-        <article className='p-4 rounded-lg mb-3 border w-1/2 flex items-center mx-auto justify-between'>
-            <p>{task.title}</p>
+        <article className='p-4 cursor-pointer rounded-lg mb-3 border w-1/2 flex items-center mx-auto justify-between'>
+            <Link to={`/todo/${task.id}`} className=''>
+                <p>{task.title}</p>
+            </Link>
             <label htmlFor={task.name}>
-                <input name={task.name} type="checkbox" onChange={(e) => handleChange(e, task.id)} checked={checked} className="checkbox" />
+                <input name={task.name} type="checkbox" onChange={(e) => handleChange(e, task.id)} checked={checked} className=" checkbox " />
             </label>
         </article>
     )
