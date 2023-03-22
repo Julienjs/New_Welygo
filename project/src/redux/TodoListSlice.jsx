@@ -10,6 +10,7 @@ const TodoSlice = createSlice({
                 id: Math.random(),
                 state: false,
                 title: action.payload,
+                description: action.payload
             }
             state.push(newTask)
         },
@@ -20,6 +21,7 @@ const TodoSlice = createSlice({
 
     }
 })
+export const { addTask, toggleTask } = TodoSlice.actions
 
 export const store = configureStore({
     reducer: {
