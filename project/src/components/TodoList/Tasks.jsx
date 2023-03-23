@@ -9,7 +9,7 @@ const Tasks = ({ task, handleChange }) => {
                 <p>{task.title}</p>
             </Link>
             <label htmlFor={task.name}>
-                <input name={task.name} type="checkbox" onChange={(e) => handleChange(e, task.id)} checked={task.state || false} className=" checkbox " />
+                <input name={task.name} type="checkbox" onChange={(e) => handleChange(e, task.id)} checked={task.state} className=" checkbox " />
             </label>
         </article>
     )

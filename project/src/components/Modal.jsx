@@ -16,7 +16,7 @@ const Modal = ({ setOpenModal, title, textBtn, taskTitle, taskDesc, handleSentDa
 
     return (
         <div className='bg-black/30 absolute inset-0 w-full h-full flex items-center justify-center'>
-            <div className='bg-white relative w-max rounded-md p-4 shadow-lg flex flex-col items-center'>
+            <div className='bg-white z-50 relative w-max rounded-md p-4 shadow-lg flex flex-col items-center'>
                 <div className="absolute cursor-pointer text-2xl right-2 top-2">
                     <ion-icon onClick={() => setOpenModal(false)} name="close-outline"></ion-icon>
                 </div>
