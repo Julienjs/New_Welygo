@@ -1,27 +1,33 @@
-import { createSlice, createAsyncThunk, configureStore } from "@reduxjs/toolkit"
+import { createSlice, configureStore } from "@reduxjs/toolkit"
 import Data from '../data/Todo.json'
+
 
 const TodoSlice = createSlice({
     name: "todo",
     initialState: Data,
     reducers: {
-        addTask: (state, action) => {
+        addTask: (state = initialState, { payload }) => {
             const newTask = {
-                id: Math.random(),
+                id: Math.floor(Math.random() * 100),
                 state: false,
-                title: action.payload,
-                description: action.payload
+                title: payload.title,
+                description: payload.description
             }
             state.push(newTask)
         },
-        toggleTask: (state, action) => {
-            const task = state.find(t => t.id === action.payload);
+        toggleTask: (state, { payload }) => {
+            const task = state.find(t => t.id === payload);
+            console.log("toggle", task.state);
             task.state = !task.state
         },
-
+        updateTask: (state, { payload }) => {
+            const task = state.find(t => t.id === Number(payload.id))
+            task.title = payload.title
+            task.description = payload.description
+        },
     }
 })
-export const { addTask, toggleTask } = TodoSlice.actions
+export const { addTask, toggleTask, updateTask } = TodoSlice.actions
 
 export const store = configureStore({
     reducer: {
