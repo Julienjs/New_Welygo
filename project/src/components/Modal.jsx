@@ -10,7 +10,6 @@ const Modal = ({ setOpenModal, title, textBtn, taskTitle, taskDesc, handleSentDa
         const elements = form.elements
         const title = elements.title.value
         const description = elements.description.value
-        console.log(title);
         handleSentData(title, description, setError)
 
     }

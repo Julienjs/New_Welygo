@@ -7,8 +7,9 @@ const TodoSlice = createSlice({
     initialState: Data,
     reducers: {
         addTask: (state = initialState, { payload }) => {
+
             const newTask = {
-                id: Math.floor(Math.random() * 100),
+                id: state[state.length - 1].id + 1,
                 state: false,
                 title: payload.title,
                 description: payload.description
